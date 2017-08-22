@@ -24,16 +24,17 @@ angular.module('copayApp.controllers').controller('preferencesBwsUrlController',
       var bws;
       switch ($scope.bwsurl.value) {
         case 'prod':
-        case 'production':
-          bws = 'https://bws.bitpay.com/bws/api'
+          case 'production':
+          // todo: for replacement by a sibcoin BWS. https://bws.bitpay.com/bws/api. http://localhost:3232/bws/api
+          bws = 'http://localhost:3232/bws/api';
           break;
         case 'sta':
         case 'staging':
-          bws = 'https://bws-staging.b-pay.net/bws/api'
+          bws = 'https://bws-staging.b-pay.net/bws/api';
           break;
         case 'loc':
         case 'local':
-          bws = 'http://localhost:3232/bws/api'
+          bws = 'http://localhost:3232/bws/api';
           break;
       };
       if (bws) {

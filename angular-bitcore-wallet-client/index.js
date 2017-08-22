@@ -34,7 +34,8 @@ bwcModule.provider("bwcService", function() {
 
       //note opts use `bwsurl` all lowercase;
       var bwc = new Client({
-        baseUrl: opts.bwsurl || 'https://bws.bitpay.com/bws/api',
+        // todo: for replacement by a sibcoin BWS. https://bws.bitpay.com/bws/api. http://localhost:3232/bws/api
+        baseUrl: opts.bwsurl || 'http://localhost:3232/bws/api',
         verbose: opts.verbose,
         timeout: 100000,
         transports: ['polling'],
